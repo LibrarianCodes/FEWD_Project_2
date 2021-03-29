@@ -1,0 +1,155 @@
+/* --- Base Element Styles --- */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.50;
+    color:rgb(51, 49, 49);
+    text-align: center;
+    font-weight: 300;
+    margin: 0 auto; 
+}
+
+img {
+    max-width: 100%;
+}
+
+.student-image{
+    max-width: 70%
+}
+
+h1{
+    font-weight: 700;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+h3 {
+    font-weight: 400;  
+}
+
+h4 {
+    text-transform: uppercase;
+}
+
+.main-header p, .main-footer p {
+    color: rgb(128, 128, 128);
+}
+
+/* Layout Container Styles */
+
+header, footer {
+    background-color: rgb(248, 244, 244);
+    padding: 10px;
+    max-width: 100%;
+}
+
+.portfolio-content {
+    padding: 10px;
+}
+
+
+/* Navigation Element Styles */
+
+
+ul{
+    padding: 0;
+}
+
+li {
+    text-transform: uppercase;
+    font-weight: 700;
+    list-style: none;
+    padding: 2px;    
+}
+
+a {
+    text-decoration: none;
+    color:rgb(51,49,49);
+}
+
+.main-header ul li {
+    padding: 10px 15px;
+    margin: 15px;
+    background-color: white;
+}
+
+ .min-nav li {
+   display: inline-flex;
+   margin: 0 25px;
+
+}
+
+.top-nav{
+    display: none;
+}
+
+
+/* --- Media Queries --- */
+
+@media (min-width:768px) {
+
+
+    .main-header .student-image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-header ul li {
+        display: inline-flex;
+        margin-top: 0;
+        background-color: rgb(248, 244, 244) ;
+        }
+    
+    .student-image {
+        max-width: 45%;
+    }    
+
+    .student-intro {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: left;
+    }
+
+    .student-intro, p{
+        margin: 0 15px 0;
+    }
+
+    .portfolio-content {
+        float: left;
+        width: 45%;
+        margin: 15px;
+        padding-bottom: 100px;
+        background-color: white;
+    }   
+
+    .min-nav{
+        display:none;
+    }
+
+    .top-nav, ul, li{
+        display: inline-flex;
+        align-items: flex-end;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+    
+        
+    
+    
+    
