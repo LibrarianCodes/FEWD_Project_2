@@ -99,7 +99,7 @@ a:hover {
     margin:0;
 }
 
- .min-nav {
+ .min-nav, .top-nav {
    display: flex;
    justify-content: space-between;
    margin: 0;
