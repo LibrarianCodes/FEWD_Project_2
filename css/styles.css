@@ -21,17 +21,25 @@ img {
 }
 
 h1{
-    font-weight: 700;
+    font-weight: 700;    
 }
 
 h2 {
     text-transform: uppercase;
     font-size: 1em;
+    color: rgb(72, 81, 155);
 }
 
 h3 {
     font-weight: 400;  
 }
+.portfolio-content h3 {
+    color: rgb(72, 81, 155);
+}
+
+.blog-content h3 {
+        color: rgb(72, 81, 155);
+    }
 
 h4 {
     text-transform: uppercase;
@@ -53,7 +61,9 @@ header, footer {
     padding: 10px;
 }
 
-
+.blog-content {
+    padding: 10px;
+}
 /* Navigation Element Styles */
 
 
@@ -73,6 +83,11 @@ a {
     color:rgb(51,49,49);
 }
 
+a:hover {
+    color: #13c1b2;
+    font-size: 1.2rem
+}
+
 .main-header ul li {
     padding: 10px 15px;
     margin: 15px;
@@ -89,7 +104,6 @@ a {
     display: none;
 }
 
-
 /* --- Media Queries --- */
 
 @media (min-width:768px) {
@@ -100,12 +114,17 @@ a {
         flex-direction: column;
     }
 
-    .main-header ul li {
+    .main-header ul {
         display: inline-flex;
-        margin-top: 0;
-        background-color: rgb(248, 244, 244) ;
+        margin: 0 auto;
         }
     
+    .main-header ul li {
+        padding: 10px;
+        margin: 15px;
+        background-color: rgb(248, 244, 244);
+    }
+
     .student-image {
         max-width: 45%;
     }    
@@ -121,35 +140,82 @@ a {
     }
 
     .portfolio-content {
-        float: left;
+        display: inline-flex;
+        flex-flow: wrap;
+        justify-content: center;
         width: 45%;
-        margin: 15px;
+     }
+
+     .blog-content {
+        display: inline-flex;
+        flex-flow: wrap;
+        justify-content: center;
+        width: 45%;
+     }
+    /*--- This method also works to display content into two columns, however I've finally figured out flexbox! --
+    .portfolio-content {
+        float: left;
+        width: 46%;
+        margin: 10px 15px;
         padding-bottom: 100px;
         background-color: white;
-    }   
+    } ----- */
+    
+    .clear {
+        clear: both;
+    }
+
+    #contact {
+        margin-bottom: 50px;
+    }
 
     .min-nav{
         display:none;
     }
 
-    .top-nav, ul, li{
-        display: inline-flex;
-        align-items: flex-end;
+    .top-nav, ul {
+        display: flex;
+        justify-content: space-between;
     }
-
-
+    
+    .top-nav h3 {
+        font-weight: 700;
+    }
 }
 
+@media (min-width:1024px) {
 
-
-
-
-
-
-
-
+   .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 25px; 
+    }
     
-        
-    
-    
-    
+    .main-header ul li {
+        padding: 0px;
+        margin: 5px;
+        background-color: rgb(248, 244, 244);
+    }
+
+    .student-intro {
+        margin-bottom: 25px;
+    }
+
+    .portfolio-content {
+       display: inline-flex;
+       flex-flow: wrap;
+       justify-content: center;
+       width: 30%;    
+    }
+
+    .blog-content {
+        display: inline-flex;
+        flex-flow: wrap;
+        justify-content: center;
+        width: 30%;    
+
+    #contact {
+        margin-bottom: 50px;
+    }
+}
