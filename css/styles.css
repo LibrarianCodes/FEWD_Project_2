@@ -93,10 +93,17 @@ a:hover {
     margin: 15px;
     background-color: white;
 }
+    
+.name {
+    font-weight: 700;
+    margin:0;
+}
 
- .min-nav li {
-   display: inline-flex;
-   margin: 0 25px;
+ .min-nav {
+   display: flex;
+   justify-content: space-between;
+   margin: 0;
+   align-items: baseline;
 
 }
 
@@ -178,6 +185,8 @@ a:hover {
         justify-content: space-between;
     }
     
+
+        
     .top-nav h3 {
         font-weight: 700;
     }
